@@ -1,0 +1,245 @@
+/* =========================
+   ORDERS PAGE
+========================= */
+
+.orders-page {
+    min-height: calc(100vh - 70px);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 45px 24px 60px;
+}
+
+.orders-header {
+    margin-bottom: 32px;
+}
+
+.orders-header h1 {
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+}
+
+.orders-header p {
+    color: #737373;
+    font-size: 16px;
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.order-card {
+    background: white;
+    border: 1px solid #dedede;
+    border-radius: 12px;
+    padding: 24px;
+    transition:
+        box-shadow 0.2s,
+        transform 0.2s;
+}
+
+.order-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.order-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.order-card-header h2 {
+    font-size: 17px;
+    margin-bottom: 7px;
+    word-break: break-all;
+}
+
+.order-date {
+    color: #777;
+    font-size: 13px;
+}
+
+.order-status-badge {
+    padding: 7px 11px;
+    border-radius: 7px;
+    background: #e8f7ee;
+    color: #167a42;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.order-card-divider {
+    height: 1px;
+    background: #e8e8e8;
+    margin: 22px 0;
+}
+
+.order-card-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center;
+    gap: 25px;
+}
+
+.order-card-info > div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.order-card-info span {
+    color: #777;
+    font-size: 13px;
+}
+
+.order-card-info strong {
+    font-size: 18px;
+}
+
+.order-payment-status {
+    color: #167a42;
+}
+
+.order-details-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 17px;
+
+    border-radius: 8px;
+    background: #171717;
+    color: white;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: background 0.2s;
+}
+
+.order-details-button:hover {
+    background: #333;
+}
+
+
+/* =========================
+   ORDERS EMPTY / ERROR STATE
+========================= */
+
+.orders-state {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 30px;
+    color: #666;
+}
+
+.orders-state h2 {
+    color: #171717;
+    margin-bottom: 8px;
+}
+
+.orders-empty {
+    background: white;
+    border: 1px solid #dedede;
+    border-radius: 14px;
+
+    padding: 60px 30px;
+
+    text-align: center;
+}
+
+.orders-empty-icon {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.orders-empty h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.orders-empty p {
+    color: #737373;
+    margin-bottom: 24px;
+}
+
+.orders-shop-button {
+    display: inline-block;
+    padding: 12px 18px;
+
+    background: #171717;
+    color: white;
+
+    border-radius: 8px;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.orders-shop-button:hover {
+    background: #333;
+}
+
+
+/* =========================
+   ORDERS RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+    .orders-page {
+        padding: 35px 5% 50px;
+    }
+
+    .orders-header h1 {
+        font-size: 30px;
+    }
+
+    .order-card-info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .order-details-button {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .orders-page {
+        padding: 28px 16px 40px;
+    }
+
+    .order-card {
+        padding: 20px;
+    }
+
+    .order-card-header {
+        flex-direction: column;
+    }
+
+    .order-card-info {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .order-details-button {
+        grid-column: auto;
+    }
+
+    .orders-empty {
+        padding: 45px 20px;
+    }
+}

@@ -1,0 +1,276 @@
+/* =========================
+   ORDER DETAILS
+========================= */
+
+.order-details-page {
+    min-height: calc(100vh - 70px);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+}
+
+.order-details-back {
+    display: inline-block;
+    margin-bottom: 25px;
+
+    color: #555;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: color 0.2s;
+}
+
+.order-details-back:hover {
+    color: #171717;
+}
+
+.order-details-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+.order-details-header h1 {
+    font-size: 36px;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+}
+
+.order-details-id {
+    color: #555;
+    font-size: 14px;
+    word-break: break-all;
+    margin-bottom: 5px;
+}
+
+.order-details-date {
+    color: #888;
+    font-size: 13px;
+}
+
+.order-details-status {
+    padding: 8px 12px;
+
+    border-radius: 7px;
+
+    background: #e8f7ee;
+    color: #167a42;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.order-details-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.7fr);
+    gap: 25px;
+    align-items: start;
+}
+
+.order-details-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-details-card {
+    background: white;
+    border: 1px solid #dedede;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.order-details-card h2 {
+    font-size: 20px;
+    margin-bottom: 22px;
+}
+
+
+/* ITEMS */
+
+.order-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-item {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr) auto;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.order-item:first-child {
+    padding-top: 0;
+}
+
+.order-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.order-item img {
+    width: 90px;
+    height: 90px;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+    background: #f7f7f7;
+}
+
+.order-item-info h3 {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.order-item-info p {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.order-item-price {
+    font-weight: 600;
+    color: #171717 !important;
+}
+
+.order-item-total {
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+
+/* SHIPPING */
+
+.shipping-details p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+.shipping-details .shipping-name {
+    color: #171717;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+
+/* SIDEBAR */
+
+.order-details-sidebar {
+    position: sticky;
+    top: 95px;
+}
+
+.order-summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.order-summary-row span {
+    color: #777;
+    font-size: 13px;
+}
+
+.order-summary-row strong {
+    font-size: 14px;
+    text-align: right;
+}
+
+.payment-paid {
+    color: #167a42;
+}
+
+.order-summary-divider {
+    height: 1px;
+    background: #e8e8e8;
+    margin: 20px 0;
+}
+
+.order-summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.order-summary-total span {
+    font-weight: 600;
+}
+
+.order-summary-total strong {
+    font-size: 22px;
+}
+
+
+/* =========================
+   ORDER DETAILS RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+    .order-details-page {
+        padding: 35px 5% 50px;
+    }
+
+    .order-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-details-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 550px) {
+    .order-details-page {
+        padding: 28px 16px 40px;
+    }
+
+    .order-details-header {
+        flex-direction: column;
+    }
+
+    .order-details-header h1 {
+        font-size: 30px;
+    }
+
+    .order-details-card {
+        padding: 20px;
+    }
+
+    .order-item {
+        grid-template-columns: 70px minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .order-item img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .order-item-total {
+        grid-column: 2;
+    }
+}

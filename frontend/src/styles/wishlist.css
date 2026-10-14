@@ -1,0 +1,43 @@
+
+/* =========================
+   WISHLIST PAGE
+========================= */
+
+.wishlist-page {
+    min-height: 100vh;
+    padding: 45px 6%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.wishlist-header {
+    margin-bottom: 35px;
+}
+
+.wishlist-header h1 {
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+}
+
+.wishlist-header p {
+    color: #737373;
+    font-size: 16px;
+}
+
+.wishlist-page .product-card {
+    height: 100%;
+}
+
+@media (max-width: 800px) {
+    .wishlist-page {
+        padding: 35px 5%;
+    }
+}
+
+@media (max-width: 520px) {
+    .wishlist-header h1 {
+        font-size: 30px;
+    }
+}
