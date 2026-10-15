@@ -1,8 +1,8 @@
-# ShopKart 🛒
+# ShopKart
 
 A full-stack e-commerce web application built using the MERN stack as part of the Engineering Labs at Scaler School of Technology. ShopKart provides a complete shopping experience, from browsing products and managing a wishlist to adding items to a cart, completing checkout with Razorpay Test Mode, and viewing order history.
 
-## ✨ Features
+## Features
 
 ### Authentication
 - Customer registration and login
@@ -40,7 +40,7 @@ A full-stack e-commerce web application built using the MERN stack as part of th
 - Order confirmation and detailed order pages
 - Cart clearing after successful payment verification
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technologies |
 |---|---|
@@ -55,7 +55,7 @@ A full-stack e-commerce web application built using the MERN stack as part of th
 | API Testing | Postman |
 | Version Control | Git, GitHub |
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 ShopKart/
